@@ -27,7 +27,7 @@ const Blogs = ({ imageSrc, title, description, buttonText, id }) => {
         {buttonText && (
           <div className="w-3/6 m-auto md:m-0">
             <button
-              className="border border-black p-2 md:w-[100px] rounded-lg md:mt-2 mt-4 w-full hover:text-[#FF9D00] hover:border-[#FF9D00] "
+              className="border border-black p-2 md:w-[100px] rounded-lg md:mt-2 mt-4 w-[full] hover:text-[#FF9D00] hover:border-[#FF9D00] "
               onClick={() => {
                 router.push(`/blog-details?id=${id}`);
               }}
