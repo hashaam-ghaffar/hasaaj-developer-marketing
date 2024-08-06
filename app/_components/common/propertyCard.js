@@ -42,12 +42,15 @@ const PropertyCard = ({
   return (
     <div
       style={{ boxShadow: "0px 0px 4px 0px #00000040" }}
-      className="w-[364px] rounded-[10px] static z-0 h-[400px]"
+      className="w-[250px] sm:w-[364px] rounded-[10px] static z-0 h-[400px]"
     >
       <div className="relative">
         <Carousel sliderRef={sliderRef} settings={carouselSettings}>
           {bgImg.map((image, index) => (
-            <div key={index} className="w-[364px] h-[259px]">
+            <div
+              key={index}
+              className="w-[250px] sm:w-[364px] h-auto sm:h-[259px]"
+            >
               <Image
                 src={image}
                 alt={`Property Image ${index + 1}`}
@@ -72,12 +75,7 @@ const PropertyCard = ({
           className="bg-[#ffffff] cursor-pointer h-[30px] sm:h-[31px] w-[30px] sm:w-[31px] rounded-[50%] absolute top-[50%] translate-y-[-50%] left-[-16px]	flex justify-center items-center"
           onClick={prevSlide}
         >
-          <Image
-            src={svgs.LeftArrow}
-            alt="RightArrow"
-            height={14}
-            width={14}
-          />
+          <Image src={svgs.LeftArrow} alt="RightArrow" height={14} width={14} />
         </div>
       </div>
       <div className="mx-[17px]">
@@ -113,7 +111,6 @@ const PropertyCard = ({
           </div>
           <Image
             src={svgs.arrowDiagnol}
-            className="absolute bottom-[20px] right-[20px]"
             width={13}
             height={13}
             alt="Arrow icon"
@@ -123,6 +120,7 @@ const PropertyCard = ({
             className="font-normal text-[13.5px] text-[#4E4E4E]"
           >
             {area}
+            <span className="ml-[6px]">Marla</span>
           </p>
         </div>
         <p className="font-normal mt-[7px] text-[13px] text-[#4E4E4E]">
